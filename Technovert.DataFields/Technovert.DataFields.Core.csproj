@@ -48,6 +48,7 @@
     <Compile Include="Custom\BankInfo\DebitCard.cs" />
     <Compile Include="Custom\BankInfo\IFSCCode.cs" />
     <Compile Include="Custom\DocumentNumbers\AdhaarCardNumber.cs" />
+    <Compile Include="Custom\DocumentNumbers\PANCard.cs" />
     <Compile Include="Custom\DocumentNumbers\PassportNumber_India.cs" />
     <Compile Include="Infrastructure\Enums.cs" />
     <Compile Include="Core\DataFields\DataField.cs" />
