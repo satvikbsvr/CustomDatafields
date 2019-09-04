@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CE2A0CF-FE8B-4811-9856-81E55918C0C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Technovert.DataFields</RootNamespace>
+    <AssemblyName>Technovert.DataFields.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\BankInfo\BankAccountNumber.cs" />
+    <Compile Include="Custom\BankInfo\CreditCard.cs" />
+    <Compile Include="Custom\BankInfo\DebitCard.cs" />
+    <Compile Include="Custom\BankInfo\IFSCCode.cs" />
+    <Compile Include="Custom\DocumentNumbers\AdhaarCardNumber.cs" />
+    <Compile Include="Custom\DocumentNumbers\PassportNumber_India.cs" />
+    <Compile Include="Infrastructure\Enums.cs" />
+    <Compile Include="Core\DataFields\DataField.cs" />
+    <Compile Include="Interfaces\IDataField.cs" />
+    <Compile Include="Core\Validators\DataFieldValidator.cs" />
+    <Compile Include="Core\Factory\DataFieldFactory.cs" />
+    <Compile Include="Core\DataFields\DateTimeDataField.cs" />
+    <Compile Include="Custom\PersonalInfo\EmailAddress.cs" />
+    <Compile Include="Custom\PersonalInfo\InternationalPhoneNumber.cs" />
+    <Compile Include="Core\DataFields\StringDataField.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
