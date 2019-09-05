@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technovert.DataFields.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFieldTestApplication", "DataFieldTestApplication\DataFieldTestApplication.csproj", "{A277E0E7-EB6E-4589-9523-44D7861C3680}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Technovert.DataFields.CustomActivities", "Technovert.DataFields.CustomActivities\Technovert.DataFields.CustomActivities.csproj", "{F4567888-F2D0-46F3-B91E-127D8897623C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A277E0E7-EB6E-4589-9523-44D7861C3680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A277E0E7-EB6E-4589-9523-44D7861C3680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A277E0E7-EB6E-4589-9523-44D7861C3680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4567888-F2D0-46F3-B91E-127D8897623C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4567888-F2D0-46F3-B91E-127D8897623C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4567888-F2D0-46F3-B91E-127D8897623C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4567888-F2D0-46F3-B91E-127D8897623C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
