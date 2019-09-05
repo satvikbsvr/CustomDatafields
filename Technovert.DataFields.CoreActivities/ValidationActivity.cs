@@ -23,14 +23,26 @@ namespace Technovert.DataFields.CoreActivities
         [Category("Output")]
         public OutArgument<bool> IsValid { get; set; }
 
+        [Category("Output")]
+        public OutArgument<string> OpType { get; set; }
+
+        [Category("Output")]
+        public OutArgument<string> OpEnumType { get; set; }
+
+        [Category("Output")]
+        public OutArgument<string>  OpValue { get; set; }
+
 
         protected override void Execute(CodeActivityContext context)
         {
             var type = Type.Get(context);
-            var value = Type.Get(context);
+            var value = Value.Get(context);
             DataFieldType datatype = (DataFieldType)Enum.Parse(typeof(DataFieldType), type);
             var isvalid = CheckValidity(value, datatype);
+            OpType.Set(context, type);
+            OpEnumType.Set(context, datatype);
+            OpValue.Set(context, value);
             IsValid.Set(context, isvalid);
-        }
+        }    
     }
 }

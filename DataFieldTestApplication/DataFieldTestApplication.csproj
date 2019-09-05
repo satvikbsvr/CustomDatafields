@@ -6,7 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Technovert.DataFields.CoreActivities\Technovert.DataFields.CoreActivities.csproj" />
     <ProjectReference Include="..\Technovert.DataFields\Technovert.DataFields.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Activities">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Activities.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
