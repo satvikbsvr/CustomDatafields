@@ -10,7 +10,7 @@ namespace Technovert.DataFields.Validators
 {
     public static class DataFieldValidator
     {
-        public static bool CheckValidity(object value, Enums.DataFieldType type)
+        public static bool CheckValidity(object value, DataFieldType type)
         {
             var dataField = DataFieldFactory.Create(type);
             dataField.Value = value;

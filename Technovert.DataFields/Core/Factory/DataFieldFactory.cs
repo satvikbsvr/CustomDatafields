@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Technovert.DataFields.Infrastructure;
 using Technovert.DataFields.Interfaces;
 
 namespace Technovert.DataFields
@@ -14,7 +15,7 @@ namespace Technovert.DataFields
             return new T();
         }
 
-        public static IDataField Create(Infrastructure.Enums.DataFieldType type)
+        public static IDataField Create(DataFieldType type)
         {
             var DataFieldType = Type.GetType("Technovert.DataFields.Custom." + type.ToString(), throwOnError: false);
 

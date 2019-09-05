@@ -8,23 +8,25 @@ namespace Technovert.DataFields.Infrastructure
 {
     public class Enums
     {
-        public enum DataFieldType
-        {
-            #region Personal Info DataField Types
-            InternationalPhoneNumber,
-            EmailAddress,
-            #endregion
+        
+    }
 
-            #region Document Number Info DataField Types
-            PassportNumber_India,
-            AdhaarCardNumber,
-            #endregion
+    public enum DataFieldType
+    {
+        #region Personal Info DataField Types
+        InternationalPhoneNumber,
+        EmailAddress,
+        #endregion
 
-            #region Bank Info DataField Types
-            CreditCard,
-            DebitCard,
-            IFSCCode
-            #endregion
-        }
+        #region Document Number Info DataField Types
+        PassportNumber_India,
+        AdhaarCardNumber,
+        #endregion
+
+        #region Bank Info DataField Types
+        CreditCard,
+        DebitCard,
+        IFSCCode
+        #endregion
     }
 }

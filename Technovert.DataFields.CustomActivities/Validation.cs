@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Activities;
 using System.ComponentModel;
-using static Technovert.DataFields.Infrastructure.Enums;
 using static Technovert.DataFields.Validators.DataFieldValidator;
+using Technovert.DataFields.Infrastructure;
 
 namespace Technovert.DataFields.CustomActivities
 {
@@ -14,35 +14,29 @@ namespace Technovert.DataFields.CustomActivities
     {
         [Category("Input")]
         [RequiredArgument]
-        public InArgument<string> Type { get; set; }
+        public InArgument<DataFieldType> InputDataType { get; set; }
 
         [Category("Input")]
         [RequiredArgument]
-        public InArgument<string> Value { get; set; }
+        public InArgument<dynamic> InputValue { get; set; }
 
         [Category("Output")]
         public OutArgument<bool> IsValid { get; set; }
 
-        [Category("Output")]
-        public OutArgument<string> OpType { get; set; }
+        //[Category("Output")]
+        //public OutArgument<DataFieldType> EnumDataType { get; set; }
 
-        [Category("Output")]
-        public OutArgument<string> OpEnumType { get; set; }
-
-        [Category("Output")]
-        public OutArgument<string> OpValue { get; set; }
-
+        //[Category("Output")]
+        //public OutArgument<DataFieldType> Enumcontext { get; set; }
 
         protected override void Execute(CodeActivityContext context)
         {
-            var type = Type.Get(context);
-            var value = Value.Get(context);
-            DataFieldType datatype = (DataFieldType)Enum.Parse(typeof(DataFieldType), type);
-            var isvalid = CheckValidity(value, datatype);
-            OpType.Set(context, type);
-            OpEnumType.Set(context, datatype);
-            OpValue.Set(context, value);
+            var enumtype = InputDataType.Get(context);
+            var value = InputValue.Get(context);
+            //DataFieldType datatype = (DataFieldType)Enum.Parse(typeof(DataFieldType), InputDataType.ToString());
+            var isvalid = CheckValidity(value, enumtype);
             IsValid.Set(context, isvalid);
-        }
+            //EnumDataType.Set(context, datatype);
+        }    
     }
 }
