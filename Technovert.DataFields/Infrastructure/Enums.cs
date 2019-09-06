@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace Technovert.DataFields.Infrastructure
 {
-    public class Enums
-    {
-        
-    }
-
     public enum DataFieldType
     {
         #region Personal Info DataField Types
